@@ -1,0 +1,64 @@
+{
+  "name": "intelligent-ide",
+  "displayName": "intelligent-ide",
+  "description": "A VS Code extension for automated code generation, debugging and CI/CD automation.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:intelligent-ide.insertFunction"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "intelligent-ide.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "extension.insertFunction",
+        "title": "Insert Function Template"
+      },
+      {
+        "command": "extension.insertTest",
+        "title": "Insert Test Template"
+      },
+      {
+        "command": "extension.debugHelper",
+        "title": "Run Debug Helper"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}

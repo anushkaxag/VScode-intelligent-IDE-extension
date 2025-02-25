@@ -1,0 +1,11 @@
+{
+  "Basic Function Template": {
+    "prefix": "basicfunc",
+    "body": [
+      "function ${1:functionName}(${2:params}) {",
+      "   ${3:// Your code here}",
+      "}"
+    ],
+    "description": "Creates a basic function template"
+  }
+}
