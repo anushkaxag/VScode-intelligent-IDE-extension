@@ -1,71 +1,93 @@
-# intelligent-ide README
+# Intelligent IDE
 
-This is the README for your extension "intelligent-ide". After writing up a brief description, we recommend including the following sections.
+**Intelligent IDE** is a VS Code extension designed to enhance developer productivity through automated code generation, advanced debugging suggestions, and CI/CD automation.
 
-## Features
+## Features 🚀
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Automated Code Generation**: Insert function templates and test cases with ease.
+- **Advanced Debugging**: Get real-time bug fix suggestions.
+- **CI/CD Automation**: Automate build and deployment processes.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation 🛠️
 
-\!\[feature X\]\(images/feature-x.png\)
+### From Source
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/YOUR_GITHUB_USERNAME/intelligent-ide.git
+   cd intelligent-ide
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Compile the extension:
+   ```sh
+   npm run compile
+   ```
+4. Install the extension manually in VS Code:
+   ```sh
+   vsce package
+   code --install-extension intelligent-ide-0.0.1.vsix
+   ```
 
-## Requirements
+## Usage 📖
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Code Generation
 
-## Extension Settings
+- Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P` on Mac)
+- Search for **Insert Function Template** or **Insert Test Template**
+- Select and insert the desired snippet
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Debugging Assistance
 
-For example:
+- If a `ReferenceError` or `SyntaxError` is detected, the extension suggests possible fixes.
+- Run the command **Debug Helper** from the Command Palette.
 
-This extension contributes the following settings:
+### CI/CD Automation
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- The extension integrates with GitHub Actions to automate testing and deployment.
 
-## Known Issues
+## Development & Contribution 🤝
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Running the Extension Locally
 
-## Release Notes
+1. Open the project in VS Code.
+2. Press `F5` to start debugging.
+3. A new VS Code window will launch with the extension activated.
 
-Users appreciate release notes as you update your extension.
+### Running Tests
 
-### 1.0.0
+```sh
+xvfb-run -a npm test
+```
 
-Initial release of ...
+### Publishing the Extension
 
-### 1.0.1
+1. Bump the version in `package.json`.
+2. Publish using `vsce`:
+   ```sh
+   vsce publish
+   ```
 
-Fixed issue #.
+## Troubleshooting 🛠️
 
-### 1.1.0
+### GitHub Actions Failing on Tests
 
-Added features X, Y, and Z.
+If tests fail due to missing X server errors, ensure your workflow includes:
 
----
+```yaml
+- name: Install xvfb
+  run: sudo apt-get install xvfb
 
-## Following extension guidelines
+- name: Run tests in headless mode
+  run: xvfb-run -a npm test
+```
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+## License 📜
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+This project is licensed under the MIT License.
 
-## Working with Markdown
+## Author ✨
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Developed by Anushka Agrawal
