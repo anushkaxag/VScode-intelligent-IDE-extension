@@ -10,7 +10,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:intelligent-ide.insertFunction"
+    "onCommand:intelligent-ide.insertFunction",
+    "onCommand:intelligent-ide.insertTest",
+    "onCommand:intelligent-ide.debugHelper"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -45,7 +47,7 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test --headless"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
