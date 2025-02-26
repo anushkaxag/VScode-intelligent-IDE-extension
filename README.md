@@ -56,9 +56,9 @@ Below is a high-level architecture diagram showcasing how the Intelligent IDE ex
       +----------------------------------+
 ### Explanation:
 
-The extension runs within VS Code, providing AI-powered code suggestions, debugging, and CI/CD automation.
-It integrates with external AI models (e.g., OpenAI Codex) for smart code generation.
-CI/CD tools like GitHub Actions streamline test automation and deployment.
+- The extension runs within VS Code, providing AI-powered code suggestions, debugging, and CI/CD automation.
+- It integrates with external AI models (e.g., OpenAI Codex) for smart code generation.
+- CI/CD tools like GitHub Actions streamline test automation and deployment.
 
 ## Installation 🛠️
 
