@@ -26,6 +26,40 @@ With this extension, developers can quickly generate function templates and test
 - Ensures a smooth and efficient development pipeline with minimal manual intervention.
 - Helps maintain code quality and stability by enforcing automated build and deployment checks.
 
+## System Architecture Diagram
+Below is a high-level architecture diagram showcasing how the Intelligent IDE extension works:
+
+       +----------------------------+
+       |        VS Code IDE         |
+       +----------------------------+
+                    |
+                    v
+       +----------------------------+
+       |   Intelligent IDE Plugin   |  
+       | - Code Generation (AI)     |  
+       | - Debugging Assistance     |  
+       | - CI/CD Automation         |
+       +----------------------------+
+                    |
+      +----------------------------------+
+      |       AI & Cloud Services       |  
+      | - OpenAI Codex / Hugging Face   |
+      | - LLM-based Code Suggestions    |
+      | - Automated Test Generation     |
+      +----------------------------------+
+                    |
+      +----------------------------------+
+      |       DevOps & CI/CD Tools      |
+      | - GitHub Actions / Jenkins      |
+      | - Docker, Kubernetes (optional) |
+      | - Test & Deployment Automation  |
+      +----------------------------------+
+### Explanation:
+
+The extension runs within VS Code, providing AI-powered code suggestions, debugging, and CI/CD automation.
+It integrates with external AI models (e.g., OpenAI Codex) for smart code generation.
+CI/CD tools like GitHub Actions streamline test automation and deployment.
+
 ## Installation 🛠️
 
 ### From Source
