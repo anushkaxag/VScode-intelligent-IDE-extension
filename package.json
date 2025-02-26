@@ -9,11 +9,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:intelligent-ide.insertFunction",
-    "onCommand:intelligent-ide.insertTest",
-    "onCommand:intelligent-ide.debugHelper"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -22,15 +18,15 @@
         "title": "Hello World"
       },
       {
-        "command": "extension.insertFunction",
+        "command": "intelligent-ide.insertFunction",
         "title": "Insert Function Template"
       },
       {
-        "command": "extension.insertTest",
+        "command": "intelligent-ide.insertTest",
         "title": "Insert Test Template"
       },
       {
-        "command": "extension.debugHelper",
+        "command": "intelligent-ide.debugHelper",
         "title": "Run Debug Helper"
       }
     ],

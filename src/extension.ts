@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 export function activate(context: vscode.ExtensionContext) {
   // Register a command for inserting a function template
   let disposable = vscode.commands.registerCommand(
-    "extension.insertFunction",
+    "intelligent-ide.insertFunction",
     () => {
       const editor = vscode.window.activeTextEditor;
       if (editor) {
@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 
   let testCommand = vscode.commands.registerCommand(
-    "extension.insertTest",
+    "intelligent-ide.insertTest",
     () => {
       const editor = vscode.window.activeTextEditor;
       if (editor) {
@@ -33,7 +33,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(testCommand);
 
   let debugCommand = vscode.commands.registerCommand(
-    "extension.debugHelper",
+    "intelligent-ide.debugHelper",
     () => {
       const editor = vscode.window.activeTextEditor;
       if (editor) {
