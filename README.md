@@ -66,7 +66,7 @@ Below is a high-level architecture diagram showcasing how the Intelligent IDE ex
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/intelligent-ide.git
+   git clone https://github.com/anushkaxag/intelligent-ide.git
    cd intelligent-ide
    ```
 2. Install dependencies:
